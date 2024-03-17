@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     gap: 0;
@@ -9,7 +10,7 @@ body {
     background: linear-gradient(to top, rgb(0, 110, 255), rgb(29, 2, 185));
     animation: nightfall 100s infinite;
     overflow: hidden;
-    height:100%;
+    min-height:100dvh;
 }
 
 body>.stars {
@@ -97,12 +98,12 @@ body>.centro_comu {
     height: 9vh;
     background-color: rgb(255, 230, 0);
     display: flex;
-    position: sticky;
+    position: absolute;
     border-radius: 100%;
     box-shadow: 0 0 2vh 4vh rgb(255, 230, 0);
     float: right;
     right: 10vh;
-    margin-top: 5vh;
+    top: 5vh;
     z-index: 0;
     animation: sunMoviment 100s infinite;
 }
@@ -116,12 +117,12 @@ body>.centro_comu {
     height: 7vh;
     background-color: rgb(209, 208, 208);
     display: flex;
-    position: sticky;
+    position: absolute;
     border-radius: 100%;
     box-shadow: 0 0 2vh 1vh rgb(214, 212, 212);
     float: left;
     left: 7vh;
-    margin-top: 110vh;
+    top: 110vh;
     z-index: 0;
     animation: moonMoviment 100s infinite;
 }
@@ -160,6 +161,7 @@ body>.centro_comu {
 
 .clock .number {
     --rotation: 0;
+
     position: absolute;
     width: 100%;
     height: 100%;
@@ -290,29 +292,29 @@ body>.centro_comu {
 
 @keyframes moonMoviment {
     0% {
-        margin-top: 110vh;
+        top: 110vh;
     }
 
     50% {
-        margin-top: 10vh;
+        top: 10vh;
     }
 
     100% {
-        margin-top: 110vh;
+        top: 110vh;
     }
 }
 
 @keyframes sunMoviment {
     0% {
-        margin-top: 5vh;
+        top: 5vh;
     }
 
     50% {
-        margin-top: 110vh;
+        top: 110vh;
     }
 
     100% {
-        margin-top: 5vh;
+        top: 5vh;
     }
 }
 
@@ -359,4 +361,5 @@ body>.centro_comu {
     100% {
         opacity: 0%;
     }
+
 }
