@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    gap: 0;
+    padding: 0 0 0;
+    text-decoration: 0;
+}
+
+body {
+    background: linear-gradient(to top, rgb(0, 110, 255), rgb(29, 2, 185));
+    animation: nightfall 100s infinite;
+    overflow: hidden;
+    height:100%;
+}
+
+body>.stars {
+    width: 100%;
+}
+
+body>.centro_comu {
+    width: 100%;
+}
+
+
+.centro_comu {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.centro_comu>img {
+    width: 150vh;
+    margin-top: 40vh;
+    position: fixed;
+    margin-left: 0;
+    animation: filters 100s infinite;
+}
+
+.centro_comu>.clock {
+    margin-top: 71vh;
+    display: flex;
+    position: absolute;
+    margin-right: 2vh;
+}
+
+.nuvem {
+    margin-top: 1vh;
+}
+
+.nuvem#nuvem1 {
+    z-index: 2;
+    display: flex;
+    position: relative;
+    animation: cloudMoviment 100s infinite;
+
+}
+
+.nuvem#nuvem2 {
+    z-index: 2;
+    align-items: center;
+    position: relative;
+    display: flex;
+    animation: cloudMoviment 70s infinite;
+
+}
+
+.nuvem#nuvem3 {
+    z-index: 2;
+    align-items: center;
+    position: relative;
+    display: flex;
+    animation: cloudMoviment 140s infinite;
+
+}
+
+.nuvem>img {
+    width: 50vh;
+    animation: filters 100s infinite;
+
+}
+
+.titulo {
+    display: flex;
+    z-index: 3;
+    position: sticky;
+    justify-content: center;
+}
+
+.titulo>img {
+    width: 100vh;
+    justify-content: center;
+    position: absolute;
+    animation: filters 100s infinite;
+}
+
+.sun {
+    width: 9vh;
+    height: 9vh;
+    background-color: rgb(255, 230, 0);
+    display: flex;
+    position: sticky;
+    border-radius: 100%;
+    box-shadow: 0 0 2vh 4vh rgb(255, 230, 0);
+    float: right;
+    right: 10vh;
+    margin-top: 5vh;
+    z-index: 0;
+    animation: sunMoviment 100s infinite;
+}
+
+.sun>body {
+    position: absolute;
+}
+
+.moon {
+    width: 7vh;
+    height: 7vh;
+    background-color: rgb(209, 208, 208);
+    display: flex;
+    position: sticky;
+    border-radius: 100%;
+    box-shadow: 0 0 2vh 1vh rgb(214, 212, 212);
+    float: left;
+    left: 7vh;
+    margin-top: 110vh;
+    z-index: 0;
+    animation: moonMoviment 100s infinite;
+}
+
+.moon>body {
+    position: absolute;
+}
+
+.clock {
+    width: 14.8vh;
+    height: 14.8vh;
+    background-color: white;
+    display: flex;
+    position: absolute;
+    color: black;
+    border: 0.7vh solid rgb(128, 52, 39);
+    border-radius: 100%;
+    z-index: 2;
+    animation: filters 100s infinite;
+}
+
+.stars {
+    opacity: 0%;
+    z-index: 0;
+    justify-content: center;
+    animation: setStars 100s infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.stars>img {
+    width: 100%;
+    height: 200vh;
+    position: fixed;
+}
+
+.clock .number {
+    --rotation: 0;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 2.5vh;
+    font-weight: 500;
+    padding: 0.2vh;
+}
+
+.clock .number.number-1 {
+    --rotation: 30deg
+}
+
+.clock .number.number-2 {
+    --rotation: 60deg
+}
+
+.clock .number.number-3 {
+    --rotation: 90deg
+}
+
+.clock .number.number-4 {
+    --rotation: 120deg
+}
+
+.clock .number.number-5 {
+    --rotation: 150deg
+}
+
+.clock .number.number-6 {
+    --rotation: 180deg
+}
+
+.clock .number.number-7 {
+    --rotation: 210deg
+}
+
+.clock .number.number-8 {
+    --rotation: 240deg
+}
+
+.clock .number.number-9 {
+    --rotation: 270deg
+}
+
+.clock .number.number-10 {
+    --rotation: 300deg
+}
+
+.clock .number.number-11 {
+    --rotation: 330deg
+}
+
+.clock .number.number-12 {
+    --rotation: 360deg
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: rgb(153, 67, 0);
+    transform: translate(-30%, -50%);
+}
+
+.clock .hand {
+    --rotation: ;
+    bottom: 50%;
+    left: 50%;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    position: absolute;
+    transform: translateX(-30%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+    z-index: 10;
+}
+
+.clock .hand.seconds {
+    width: 0.2vh;
+    height: 40%;
+    background-color: red;
+
+}
+
+.clock .hand.minutes {
+    width: 0.5vh;
+    height: 35%;
+    background-color: rgb(165, 71, 7);
+
+}
+
+.clock .hand.hours {
+    width: 0.7vh;
+    height: 25%;
+    background-color: rgb(99, 36, 29);
+
+}
+
+@keyframes cloudMoviment {
+    from {
+        left: -60vh;
+
+    }
+
+    to {
+        left: 213vh;
+
+    }
+}
+
+@keyframes filters {
+    0% {
+        filter: none;
+    }
+    50%{
+        filter: saturate(40%);
+    }
+    100% {
+        filter: none;
+    }
+}
+
+@keyframes moonMoviment {
+    0% {
+        margin-top: 110vh;
+    }
+
+    50% {
+        margin-top: 10vh;
+    }
+
+    100% {
+        margin-top: 110vh;
+    }
+}
+
+@keyframes sunMoviment {
+    0% {
+        margin-top: 5vh;
+    }
+
+    50% {
+        margin-top: 110vh;
+    }
+
+    100% {
+        margin-top: 5vh;
+    }
+}
+
+@keyframes nightfall {
+    0% {
+        background: linear-gradient(to top, rgb(0, 110, 255), rgb(29, 2, 185));
+    }
+
+    20% {
+        background-color: rgb(0, 110, 255);
+    }
+
+    35% {
+        background-color: rgba(98, 40, 1, 0.832);
+    }
+    40%{
+        background: linear-gradient(to top, rgba(98, 40, 1, 0.832), rgb(9, 0, 61));
+    }
+    50% {
+        background: rgb(10, 0, 37);
+    }
+
+    70%{
+        background: rgb(0, 38, 87);
+    }
+    97% {
+        background: rgb(0, 110, 255);
+    }
+
+    100% {
+        background: linear-gradient(to top, rgb(0, 110, 255), rgb(29, 2, 185));
+    }
+}
+
+@keyframes setStars {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
